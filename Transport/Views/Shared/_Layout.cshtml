@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Transport</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Transport.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <br />
+                        <br />
+                        <img class="block" id="u730_img" src="~/Images/hSenid.png" alt="" width="170" height="40" />
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a asp-controller="Route" asp-action="Add" class="nav-link align-middle px-0 text-white">
+                                <i class="glyphicon glyphicon-map-marker">&nbsp;</i><span class="ms-1 d-none d-sm-inline">Transport Management</span>
+                            </a>
+
+                        <li class="nav-item">
+                            <a asp-controller="Route" asp-action="RouteView" class="nav-link align-middle px-0 text-white">
+                                <i class="glyphicon glyphicon-map-marker">&nbsp;</i><span class="ms-1 d-none d-sm-inline">View</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+
+                </div>
+            </div>
+            <div class="col py-3">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿@model List<Transport.Models.Domain.Route>
+
+@{
+}
+
+<h1>Route</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Url</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var route in Model)
+        {
+            <tr>
+                <td>@route.Id</td>
+                <td>@route.Name</td>
+                <td>@route.Url</td>
+                <td><a href="Routes/View/@route.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
